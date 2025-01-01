@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="inventoryPane" prefHeight="460.0" prefWidth="800.0" stylesheets="@css/player.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.talefx.InventoryController">
+   <children>
+      <ListView fx:id="inventoryListView" prefHeight="460.0" prefWidth="400.0" />
+   </children>
+</AnchorPane>

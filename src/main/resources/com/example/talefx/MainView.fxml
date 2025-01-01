@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@css/player.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.talefx.MainController">
+    <!-- Dynamic center content -->
+    <center>
+        <Pane id="dynamicContent" fx:id="dynamicContent" prefHeight="357.0" prefWidth="800.0" />
+    </center>
+
+    <!-- Static bottom player info panel -->
+    <bottom>
+      <Pane fx:id="playerInfoPane" maxHeight="-Infinity" prefHeight="140.0" styleClass="pane-border">
+         <children>
+             <StackPane fx:id="progressBarContainer" layoutY="113.0" prefHeight="26.0" prefWidth="800.0">
+                 <ProgressBar fx:id="playerExpProgressBar" prefHeight="18.0" prefWidth="793.0" />
+                 <Label fx:id="playerExpProgressLabel" text="0.000%" />
+             </StackPane>
+             <VBox layoutY="1.0" prefHeight="126.0" prefWidth="293.0">
+               <children>
+                  <Label fx:id="playerNameLabel" text="Label" />
+                  <Label fx:id="playerLevelLabel" text="Label" />
+                  <Label fx:id="playerGoldLabel" text="Label" />
+                  <HBox prefHeight="38.0" prefWidth="167.0">
+                     <children>
+                        <Label fx:id="playerHpLabel" text="Label" />
+                        <ProgressBar fx:id="playerHpProgressBar" prefWidth="200.0" progress="0.0" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </VBox>
+            <ButtonBar layoutX="600.0" layoutY="1.0" prefHeight="40.0" prefWidth="200.0">
+              <buttons>
+                <Button fx:id="inventoryButton" minWidth="0.0" mnemonicParsing="false" onAction="#showInventoryView" prefHeight="26.0" prefWidth="88.0" text="Inventory">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor></Button>
+              </buttons>
+               <padding>
+                  <Insets right="4.0" />
+               </padding>
+            </ButtonBar>
+         </children>
+      </Pane>
+    </bottom>
+</BorderPane>

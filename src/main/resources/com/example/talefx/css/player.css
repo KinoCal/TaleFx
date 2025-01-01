@@ -1,0 +1,64 @@
+/* General Label Styling */
+.label {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-font-family: Consolas;
+}
+
+/* Uniform Border Style for Panes */
+.pane-border {
+    -fx-border-color: white;       /* Border color */
+    -fx-border-width: 2;          /* Border width */
+    -fx-border-style: solid;      /* Border style: solid, dashed, dotted, etc. */
+    -fx-background-color: black;  /* Background color */
+    -fx-padding: 10;              /* Optional padding inside the border */
+}
+
+
+/* ListView Styling */
+#inventoryListView {
+    -fx-border-color: white;       /* Border color */
+    -fx-border-width: 2;          /* Border width */
+    -fx-border-style: solid;      /* Border style */
+    -fx-background-color: black;  /* Background color */
+}
+
+/* List Cell Styling */
+.list-cell {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-font-family: Consolas;
+    -fx-background-color: black;  /* Default background */
+}
+
+/* Hover Styling */
+.list-cell:hover {
+    -fx-background-color: darkgray; /* Change background when hovered */
+}
+
+/* Selected Cell Styling */
+.list-cell:focused, .list-cell:selected {
+    -fx-background-color: blue;   /* Change background when selected */
+    -fx-text-fill: yellow;        /* Change text color when selected */
+    -fx-font-weight: bold;        /* Optional: Make the text bold */
+}
+
+#playerExpProgressLabel{
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-font-family: Consolas;
+}
+
+.progress-bar{
+    -fx-accent: #A020F0;
+    -fx-progress-color: #A020F0;
+    -fx-padding: 0;
+}
+
+.tooltip{
+    -fx-background-color: #A020F0;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-family: Consolas;
+
+}
