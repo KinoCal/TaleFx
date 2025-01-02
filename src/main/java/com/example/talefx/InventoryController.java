@@ -62,6 +62,7 @@ public class InventoryController {
             // Add mouse enter event to show the tooltip or handle hover logic
             setOnMouseEntered(event -> showTooltip(event));
             setOnMouseExited(event -> hideTooltip());
+            setOnMouseClicked(event -> hideTooltip());
         }
 
         private void showTooltip(MouseEvent event) {

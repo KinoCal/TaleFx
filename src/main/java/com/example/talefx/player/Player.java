@@ -38,12 +38,6 @@ public class Player {
     private double attackSpeed;
     private int damage;
     private int armor;
-    private boolean playerAlive;
-    private boolean inventoryFull;
-    private int playerItemIndex;
-    private int playerEquipmentIndex;
-    private int playerInventoryIndex;
-    private int shopItemIndex;
     private int inventorySize;
     public Item empty = new Item_Empty();
     public Item emptyWeapon = new WeaponItem(0, "empty", "weapon", "empty", 0, 0, 1);
@@ -224,18 +218,10 @@ public class Player {
         this.gold += gold;
     }
 
-    public boolean isPlayerAlive() {
-        return playerAlive;
-    }
-
-    public void setPlayerAlive(boolean playerAlive) {
-        this.playerAlive = playerAlive;
-    }
-
     public void takeDamage(int damage) {
         setCurrentHp(Math.max(0, getCurrentHp() - damage));
         if (getCurrentHp() == 0) {
-            setPlayerAlive(false);
+
         }
     }
 
@@ -245,36 +231,6 @@ public class Player {
             setCurrentHp(maxHp);
         }
     }
-
-    public int getPlayerItemIndex() {
-        return playerItemIndex;
-    }
-
-
-    public void setPlayerItemIndex(int playerItemIndex) {
-        this.playerItemIndex = playerItemIndex;
-    }
-
-
-    public boolean setInventoryFull(boolean inventoryFull) {
-        return this.inventoryFull = inventoryFull;
-    }
-
-    public boolean getInventoryFull() {
-
-        return inventoryFull;
-    }
-
-
-    public int getPlayerEquipmentIndex() {
-        return playerEquipmentIndex;
-    }
-
-
-    public void setPlayerEquipmentIndex(int playerEquipmentIndex) {
-        this.playerEquipmentIndex = playerEquipmentIndex;
-    }
-
 
     public WeaponItem getCurrentWeapon() {
         return currentWeapon;
@@ -314,17 +270,6 @@ public class Player {
     public void setArmor(int armor) {
         this.armor = armor;
     }
-
-
-    public int getPlayerInventoryIndex() {
-        return playerInventoryIndex;
-    }
-
-
-    public void setPlayerInventoryIndex(int playerInventoryIndex) {
-        this.playerInventoryIndex = playerInventoryIndex;
-    }
-
 
     public int getStrengthStat() {
         return strengthStat;
@@ -369,21 +314,7 @@ public class Player {
                 ", gold=" + gold +
                 ", damage=" + getDamage() +
                 ", armor=" + armor +
-                ", playerAlive=" + playerAlive +
-                ", inventoryFull=" + inventoryFull +
-                ", playerItemIndex=" + playerItemIndex +
-                ", playerEquipmentIndex=" + playerEquipmentIndex +
-                ", playerInventoryIndex=" + playerInventoryIndex +
                 '}';
-    }
-
-
-    public int getShopItemIndex() {
-        return shopItemIndex;
-    }
-
-    public void setShopItemIndex(int shopItemIndex) {
-        this.shopItemIndex = shopItemIndex;
     }
 
 
